@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CARANDAY_134_360_TOUR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes ">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-fachada">
+        <li class="text">FACHADA</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-entrada">
+        <li class="text">ENTRADA</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-bodega_entrada">
+        <li class="text">BODEGA_ENTRADA</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-galeria">
+        <li class="text">GALERIA</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-escaleras">
+        <li class="text">ESCALERAS</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-galeria_pasillo">
+        <li class="text">GALERIA_PASILLO</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-galeria_hb_bao">
+        <li class="text">GALERIA_HB_BAÑO</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-recamara_pb">
+        <li class="text">RECAMARA_PB</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-bao_pb">
+        <li class="text">BAÑO_PB</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-pasillo">
+        <li class="text">PASILLO</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-cocina">
+        <li class="text">COCINA</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-bodega_cocina">
+        <li class="text">BODEGA_COCINA</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-pasillo_cocina_comedor">
+        <li class="text">PASILLO_COCINA_COMEDOR</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-sala_comedor">
+        <li class="text">SALA_COMEDOR</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-patio_1_ver2">
+        <li class="text">PATIO_1_VER2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-patio_2_ver2">
+        <li class="text">PATIO_2_VER2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-patio_3_ver2">
+        <li class="text">PATIO_3_VER2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-lobby_pa">
+        <li class="text">LOBBY_PA</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-recamara_master">
+        <li class="text">RECAMARA_MASTER</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-walkin_closet_01">
+        <li class="text">WALKIN_CLOSET_01</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-walkin_closet_02">
+        <li class="text">WALKIN_CLOSET_02</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-walkin_closet_03">
+        <li class="text">WALKIN_CLOSET_03</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-bao_pa_1">
+        <li class="text">BAÑO_PA_1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-bao_pa_2">
+        <li class="text">BAÑO_PA_2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-balcon">
+        <li class="text">BALCON</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
